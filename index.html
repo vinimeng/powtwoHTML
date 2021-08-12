@@ -31,7 +31,6 @@
     <meta name="msapplication-config" content="browserconfig.xml" />
 
     <!-- Google -->
-    <link rel="manifest" href="/site.webmanifest?v=2" />
     <meta name="application-name" content="PowTwo" />
     <meta name="theme-color" content="#333333" />
 
@@ -57,388 +56,21 @@
 
     <!-- Normalize CSS -->
     <style>
-        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-        /* Document
-        ========================================================================== */
-
-        /**
-        * 1. Correct the line height in all browsers.
-        * 2. Prevent adjustments of font size after orientation changes in iOS.
-        */
-        html {
-            line-height: 1.15;
-            /* 1 */
-            -webkit-text-size-adjust: 100%;
-            /* 2 */
-            font-family: sans-serif;
-            background-color: #242424;
-            color: white;
-            font-size: 18px;
-        }
-
-        /* Sections
-        ========================================================================== */
-
-        /**
-        * Remove the margin in all browsers.
-        */
-        body {
-            max-width: 1024px;
-            margin: auto;
-            padding: 15px;
-        }
-
-        /**
-        * Render the `main` element consistently in IE.
-        */
-        main {
-            display: block;
-        }
-
-        /**
-        * Correct the font size and margin on `h1` elements within `section` and
-        * `article` contexts in Chrome, Firefox, and Safari.
-        */
-        h1 {
-            font-size: 2em;
-            margin: 0.67em 0;
-        }
-
-        p {
-            margin-left: 15px;
-        }
-
-        /* Grouping content
-        ========================================================================== */
-
-        /**
-        * 1. Add the correct box sizing in Firefox.
-        * 2. Show the overflow in Edge and IE.
-        */
-        hr {
-            box-sizing: content-box;
-            /* 1 */
-            height: 0;
-            /* 1 */
-            overflow: visible;
-            /* 2 */
-        }
-
-        /**
-        * 1. Correct the inheritance and scaling of font size in all browsers.
-        * 2. Correct the odd `em` font sizing in all browsers.
-        */
-        pre {
-            font-family: monospace, monospace;
-            /* 1 */
-            font-size: 1em;
-            /* 2 */
-        }
-
-        /* Text-level semantics
-        ========================================================================== */
-
-        /**
-        * Remove the gray background on active links in IE 10.
-        */
-        a {
-            background-color: transparent;
-            color: #efbb14;
-        }
-        a:hover, a:visited:hover {
-            background-color: transparent;
-            color: #e89714;
-        }
-        a:active, a:active:hover {
-            background-color: transparent;
-            color: #a46c0c;
-        }
-        a:visited {
-            background-color: transparent;
-            color: #a17d11;
-        }
-
-        /**
-        * 1. Remove the bottom border in Chrome 57-
-        * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-        */
-        abbr[title] {
-            border-bottom: none;
-            /* 1 */
-            text-decoration: underline;
-            /* 2 */
-            text-decoration: underline dotted;
-            /* 2 */
-        }
-
-        /**
-        * Add the correct font weight in Chrome, Edge, and Safari.
-        */
-        b,
-        strong {
-            font-weight: bolder;
-        }
-
-        /**
-        * 1. Correct the inheritance and scaling of font size in all browsers.
-        * 2. Correct the odd `em` font sizing in all browsers.
-        */
-        code,
-        kbd,
-        samp {
-            font-family: monospace, monospace;
-            /* 1 */
-            font-size: 1em;
-            /* 2 */
-        }
-
-        /**
-        * Add the correct font size in all browsers.
-        */
-        small {
-            font-size: 80%;
-        }
-
-        /**
-        * Prevent `sub` and `sup` elements from affecting the line height in
-        * all browsers.
-        */
-        sub,
-        sup {
-            font-size: 75%;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
-        }
-
-        sub {
-            bottom: -0.25em;
-        }
-
-        sup {
-            top: -0.5em;
-        }
-
-        /* Embedded content
-        ========================================================================== */
-
-        /**
-        * Remove the border on images inside links in IE 10.
-        */
-        img {
-            border-style: none;
-        }
-
-        /* Forms
-        ========================================================================== */
-
-        /**
-        * 1. Change the font styles in all browsers.
-        * 2. Remove the margin in Firefox and Safari.
-        */
-        button,
-        input,
-        optgroup,
-        select,
-        textarea {
-            font-family: inherit;
-            /* 1 */
-            font-size: 100%;
-            /* 1 */
-            line-height: 1.15;
-            /* 1 */
-            margin: 0;
-            /* 2 */
-        }
-
-        /**
-        * Show the overflow in IE.
-        * 1. Show the overflow in Edge.
-        */
-        button,
-        input {
-            /* 1 */
-            overflow: visible;
-        }
-
-        /**
-        * Remove the inheritance of text transform in Edge, Firefox, and IE.
-        * 1. Remove the inheritance of text transform in Firefox.
-        */
-        button,
-        select {
-            /* 1 */
-            text-transform: none;
-        }
-
-        /**
-        * Correct the inability to style clickable types in iOS and Safari.
-        */
-        button,
-        [type="button"],
-        [type="reset"],
-        [type="submit"] {
-            -webkit-appearance: button;
-        }
-
-        /**
-        * Remove the inner border and padding in Firefox.
-        */
-        button::-moz-focus-inner,
-        [type="button"]::-moz-focus-inner,
-        [type="reset"]::-moz-focus-inner,
-        [type="submit"]::-moz-focus-inner {
-            border-style: none;
-            padding: 0;
-        }
-
-        /**
-        * Restore the focus styles unset by the previous rule.
-        */
-        button:-moz-focusring,
-        [type="button"]:-moz-focusring,
-        [type="reset"]:-moz-focusring,
-        [type="submit"]:-moz-focusring {
-            outline: 1px dotted ButtonText;
-        }
-
-        /**
-        * Correct the padding in Firefox.
-        */
-        fieldset {
-            padding: 0.35em 0.75em 0.625em;
-        }
-
-        /**
-        * 1. Correct the text wrapping in Edge and IE.
-        * 2. Correct the color inheritance from `fieldset` elements in IE.
-        * 3. Remove the padding so developers are not caught out when they zero out
-        *    `fieldset` elements in all browsers.
-        */
-        legend {
-            box-sizing: border-box;
-            /* 1 */
-            color: inherit;
-            /* 2 */
-            display: table;
-            /* 1 */
-            max-width: 100%;
-            /* 1 */
-            padding: 0;
-            /* 3 */
-            white-space: normal;
-            /* 1 */
-        }
-
-        /**
-        * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-        */
-        progress {
-            vertical-align: baseline;
-        }
-
-        /**
-        * Remove the default vertical scrollbar in IE 10+.
-        */
-        textarea {
-            overflow: auto;
-        }
-
-        /**
-        * 1. Add the correct box sizing in IE 10.
-        * 2. Remove the padding in IE 10.
-        */
-        [type="checkbox"],
-        [type="radio"] {
-            box-sizing: border-box;
-            /* 1 */
-            padding: 0;
-            /* 2 */
-        }
-
-        /**
-        * Correct the cursor style of increment and decrement buttons in Chrome.
-        */
-        [type="number"]::-webkit-inner-spin-button,
-        [type="number"]::-webkit-outer-spin-button {
-            height: auto;
-        }
-
-        /**
-        * 1. Correct the odd appearance in Chrome and Safari.
-        * 2. Correct the outline style in Safari.
-        */
-        [type="search"] {
-            -webkit-appearance: textfield;
-            /* 1 */
-            outline-offset: -2px;
-            /* 2 */
-        }
-
-        /**
-        * Remove the inner padding in Chrome and Safari on macOS.
-        */
-        [type="search"]::-webkit-search-decoration {
-            -webkit-appearance: none;
-        }
-
-        /**
-        * 1. Correct the inability to style clickable types in iOS and Safari.
-        * 2. Change font properties to `inherit` in Safari.
-        */
-        ::-webkit-file-upload-button {
-            -webkit-appearance: button;
-            /* 1 */
-            font: inherit;
-            /* 2 */
-        }
-
-        /* Interactive
-        ========================================================================== */
-
-        /*
-        * Add the correct display in Edge, IE 10+, and Firefox.
-        */
-        details {
-            display: block;
-            margin-left: 15px;
-        }
-
-        /*
-        * Add the correct display in all browsers.
-        */
-        summary {
-            display: list-item;
-        }
-
-        /* Misc
-        ========================================================================== */
-
-        /**
-        * Add the correct display in IE 10+.
-        */
-        template {
-            display: none;
-        }
-
-        /**
-        * Add the correct display in IE 10.
-        */
-        [hidden] {
-            display: none;
-        }
+        html{line-height:1.15;-webkit-text-size-adjust:100%;font-family:sans-serif;background-color:#242424;color:#fff;font-size:18px}body{max-width:1024px;margin:auto;padding:15px}main{display:block}h1{font-size:2em;margin:.67em 0}p{margin-left:15px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;color:#efbb14}a:hover,a:visited:hover{background-color:transparent;color:#e89714}a:active,a:active:hover{background-color:transparent;color:#a46c0c}a:visited{background-color:transparent;color:#a17d11}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block;margin-left:15px}summary{display:list-item}template{display:none}[hidden]{display:none}
     </style>
 </head>
 
 <body>
     <header>
-        <h1><img src="img/favicon-32x32.png" alt="PowTwo logo" /> PowTwo</h1>
+        <h1 id="logo"><img src="img/favicon-194x194.png" width="64" height="64" alt="PowTwo logo" /> PowTwo</h1>
         <p>Site pessoal de Vinícius Meng</p>
         <details>
             <summary><em><u>Menu</u></em></summary>
             <p>
-                <a href="#projetos">&rArr; Projetos</a>
+                <a href="#sobre">&rArr; Sobre mim</a>
+                <br />
+                <br />
+                <a href="#projetos">&rArr; Projetos relevantes</a>
                 <br />
                 <br />
                 <a href="#faq">&rArr; FAQ</a>
@@ -453,43 +85,274 @@
         <section>
             <noscript>
                 <p><em><strong>Você não está com o JavaScript habilitado!</strong></em></p>
-                <p><strong>Sem problemas, esse site continuará funcionando &#128521;.</strong></p>
+                <p><strong>Sem problemas, esse site continuará funcionando ;)</strong></p>
                 <hr />
             </noscript>
         </section>
         <section>
             <p><em>Bem-vindo ao meu site!</em></p>
-            <p>Aqui irei expor alguns de meus projetos pessoais e profissionais, 
-                além de contar um pouquinho da minha história.</p>
+            <p>
+                Aqui irei expor alguns de meus projetos pessoais e profissionais,
+                além de contar um pouquinho da minha história.
+            </p>
         </section>
         <section>
+            <details id="sobre">
+                <summary><em><u>Sobre mim</u></em></summary>
+                <br />
+                <fieldset>
+                    <p>
+                        Me chamo Vinícius Meng, sou técnico em informática formado,
+                        atualmente cursando o curso de Engenharia da Computação na Universidade FSG.
+                    </p>
+                    <p>
+                        Sou desenvolvedor full stack na
+                        <a href="https://verodellaudo.com.br" rel="noreferrer noopener">
+                            Clínica de Diagnósticos por Imagem Vero Dellaudo
+                        </a>
+                        .
+                    </p>
+                    <p>
+                        Tenho afinidade maior com as seguintes tecnologias:
+                        <ul>
+                            <li>PHP</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>Java</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SASS</li>
+                            <li>Banco de dados Oracle</li>
+                            <li>Banco de dados MySQL</li>
+                            <li>C#</li>
+                            <li>Python</li>
+                        </ul>
+                    </p>
+                    <p>Mas estou sempre a procura de novos conhecimentos!</p>
+                </fieldset>
+            </details>
+            <br />
             <details id="projetos">
-                <summary><em><u>Projetos</u></em></summary>
+                <summary><em><u>Projetos relevantes</u></em></summary>
                 <br />
                 <fieldset>
                     <article>
                         <header>
                             <p><em><strong>BetterStartUp</strong></em></p>
                         </header>
-                        <p>Pequeno programa feito em C# para gerenciar a inicialização de 
-                            programas no sistema operacional Windows.</p>
+                        <p>
+                            Pequeno programa feito em C# para gerenciar a inicialização de
+                            programas no sistema operacional Windows.
+                        </p>
+                        <p>
+                            Funcionalidades:
+                            <ul>
+                                <li>Retirar programas da inicialização do Windows;</li>
+                                <li>Adicionar programas a lista de inicialização do BetterStartUp;</li>
+                                <li>Definir ordem dos programas adicionados a lista de inicialização;</li>
+                                <li>Definir delay de inicialização dos programas adicionados a lista;</li>
+                                <li>Definir parâmetros de linha de comando dos programas adicionados a lista;</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <a href="https://github.com/vinimeng/BetterStartUp" rel="noreferrer noopener">
+                                &rarr; Projeto no GitHub
+                            </a>
+                            <br />
+                            <br />
+                            <small>Se gostar, estrele o projeto ;)</small>
+                        </p>
                     </article>
                     <hr />
+                    <article>
+                        <header>
+                            <p><em><strong>LevelEditor</strong></em></p>
+                        </header>
+                        <p>
+                            Editor de sprites arrasta e solta desenvolvido em Typescript. Tem o objetivo de ser o
+                            editor de níveis do jogo web que estou desenvolvendo.
+                        </p>
+                        <p>
+                            Funcionalidades:
+                            <ul>
+                                <li>Permite que níveis sejam feitos no próprio navegador;</li>
+                                <li>Salvamento do nível feito em arquivo JSON;</li>
+                                <li>Carregamento de níveis salvos para continuar editando;</li>
+                                <li>Autosalvamento (nos casos de sair sem salvar o progresso);</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <a href="https://github.com/vinimeng/LevelEditor" rel="noreferrer noopener">
+                                &rarr; Projeto no GitHub
+                            </a>
+                            <br />
+                            <br />
+                            <small>Se gostar, estrele o projeto ;)</small>
+                        </p>
+                    </article>
+                    <hr />
+                    <article>
+                        <header>
+                            <p><em><strong>LaudosWeb</strong></em></p>
+                        </header>
+                        <p>
+                            O LaudosWeb é um projeto de um RIS (Radiological information system)
+                            em linguagem web voltado para clinícas de diagnóstico por imagem.
+                        </p>
+                        <p>
+                            Funcionalidades:
+                            <ul>
+                                <li>Integrações com ERPs;</li>
+                                <li>Integrações com PACS;</li>
+                                <li>Fluxo de atendimento de pacientes;</li>
+                                <li>Gravação de áudios e digitação de laudos médicos;</li>
+                                <li>Visualização de exames online;</li>
+                            </ul>
+                        </p>
+                        <p>
+                            O projeto não é de minha autoria,
+                            no momento sou apenas o principal desenvolvedor do projeto.
+                        </p>
+                        <p>
+                            <a href="https://ris.verodellaudo.com.br/" rel="noreferrer noopener">
+                                &rarr; LaudosWeb da Clínica Vero Dellaudo
+                            </a>
+                            <br />
+                            <br />
+                            <a href="https://ris.suldiagnostico.com.br/" rel="noreferrer noopener">
+                                &rarr; LaudosWeb da Clínica Sul Diagnóstico
+                            </a>
+                        </p>
+                    </article>
+                    <hr />
+                    <article>
+                        <header>
+                            <p><em><strong>FM Sistemas</strong></em></p>
+                        </header>
+                        <p>
+                            O FM Sistemas é um sistema de gerenciamento de radiofármacos, voltado
+                            principalmente para o fluxo de trabalho de exames de medicina nuclear.
+                        </p>
+                        <p>
+                            Funcionalidades:
+                            <ul>
+                                <li>Cadastros e controles de geradores, eluição, marcação,
+                                    fracionamento, administração e evolução;</li>
+                                <li>Entrada e saída de materiais;</li>
+                                <li>Cadastros de pacientes, agendas e atendimentos;</li>
+                                <li>Controle de acesso e rastreamento;</li>
+                                <li>Relatório e gráficos;</li>
+                            </ul>
+                        </p>
+                        <p>
+                            O projeto não é de minha autoria,
+                            fui apenas um dos desenvolvedores do projeto.
+                        </p>
+                        <p>
+                            <a href="https://fmsistemas.med.br/" rel="noreferrer noopener">
+                                &rarr; FM Sistemas
+                            </a>
+                        </p>
+                    </article>
+                    <hr />
+                    <article>
+                        <header>
+                            <p><em><strong>PowTwo site</strong></em></p>
+                        </header>
+                        <p>
+                            Meu site pessoal. Esse aqui que você está navegando :)
+                        </p>
+                        <p>
+                            Funcionalidades:
+                            <ul>
+                                <li>Simples;</li>
+                                <li>Funcional;</li>
+                                <li>Informativo;</li>
+                                <li>Sem JavaScript;</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <a href="https://github.com/vinimeng/powtwoHTML" rel="noreferrer noopener">
+                                &rarr; Projeto no GitHub
+                            </a>
+                            <br />
+                            <br />
+                            <small>Se gostar, estrele o projeto ;)</small>
+                        </p>
+                    </article>
                 </fieldset>
             </details>
             <br />
             <details id="faq">
                 <summary><em><u>FAQ</u></em></summary>
+                <br />
+                <fieldset>
+                    <article>
+                        <header>
+                            <p><em><strong>Por que <u>PowTwo</u>?</strong></em></p>
+                        </header>
+                        <p>
+                            Porque eu queria um nome único que não fosse meu nome, não tivesse
+                            sendo utilizado em medias sociais, não fosse o nome de alguma empresa,
+                            tivesse um domínio <code>.com</code> disponível e fosse relacionado
+                            a área de tecnologia.
+                        </p>
+                    </article>
+                    <hr />
+                    <article>
+                        <header>
+                            <p><em><strong>O que significa/representa <u>PowTwo</u>?</strong></em></p>
+                        </header>
+                        <p>
+                            PowTwo é uma alusão de como se pronuncia "potência de 2" em inglês (<em>power of two</em>).
+                        </p>
+                        <p>
+                            A potência de 2 na computação é muito importante, pois computadores utilizam a base númerica
+                            binária (0 e 1) para realizar todos seus cálculos lógicos.
+                        </p>
+                        <p>
+                            Pow é também como se chama o método para realizar o cálculo de potenciação na linguagem
+                            de programação C.
+                        </p>
+                    </article>
+                    <hr />
+                    <article>
+                        <header>
+                            <p><em><strong>Por que esse site é feito apenas com HTML, o mínimo de CSS possível e sem
+                                        JavaScript?</strong></em></p>
+                        </header>
+                        <p>
+                            Fiz dessa forma pois queria me desafiar a fazer um site bonito e funcional da forma mais
+                            simples possível.
+                        </p>
+                        <p>
+                            Além disso, esse é um site estático sem grande interações, tirando totalmente a necessidade
+                            de JavaScript.
+                        </p>
+                    </article>
+                </fieldset>
             </details>
             <br />
             <details id="contato">
                 <summary><em><u>Contato</u></em></summary>
+                <p>
+                    <a href="https://www.linkedin.com/in/vinicius-meng/" rel="noreferrer noopener">&rArr; LinkedIn</a>
+                    <br />
+                    <br />
+                    <a href="https://github.com/vinimeng" rel="noreferrer noopener">&rArr; GitHub</a>
+                    <br />
+                    <br />
+                    <a href="https://www.facebook.com/vinicius.meng" rel="noreferrer noopener">&rArr; Facebook</a>
+                    <br />
+                    <br />
+                    <a href="mailto:viniciusmeng2@gmail.com" rel="noreferrer noopener">viniciusmeng2@gmail.com</a>
+                </p>
             </details>
         </section>
     </main>
     <hr />
     <footer>
-        <p>Feito com &#128151; por Vinícius Meng &#169; 2021</p>
+        <p>Feito com &hearts; por Vinícius Meng</p>
     </footer>
 </body>
 
